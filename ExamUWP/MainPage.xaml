@@ -8,7 +8,28 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="10">Add Contact</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1"  TextAlignment="Right" Margin="5">Name</TextBlock>
+        <TextBox x:Name="name" Grid.Column="1" Grid.Row="1" Margin="5" ></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="2" TextAlignment="Right" Margin="5" >Phone</TextBlock>
+        <TextBox x:Name="phone" Grid.Column="1" Grid.Row="2"  Margin="5"></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" Margin="5">
+            <Button x:Name="AddContact" Click="Btn_AddContact" >Add Contact</Button>
+           
+        </StackPanel>
+        <HyperlinkButton Grid.Column="1" Grid.Row="4" x:Name="search" Click="SearchContact"  Margin="5">Search Contact</HyperlinkButton>
     </Grid>
 </Page>
